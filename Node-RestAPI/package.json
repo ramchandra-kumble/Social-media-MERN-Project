@@ -1,5 +1,5 @@
 {
-  "name": "node-restapi",
+  "name": "restapi",
   "version": "1.0.0",
   "description": "RestFull API for the backend connection",
   "main": "index.js",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/vomi-exe/Social-media-MERN-Project/issues"
   },
-  "homepage": "https://github.com/vomi-exe/Social-media-MERN-Project#readme"
+  "homepage": "https://github.com/vomi-exe/Social-media-MERN-Project#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.13",
+    "morgan": "^1.10.0"
+  }
 }
