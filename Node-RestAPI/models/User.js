@@ -18,7 +18,8 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        min: 6, 
+        min: 6,
+        unique: true 
     },
     profilePicture: {
         type: String,
@@ -40,22 +41,23 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    desc: {
+    desc:{
         type: String,
-        max:200
+        max:50
     },
     city: {
         type: String,
-        max: 50
+        max:50
     },
-    from : {
-        type: String,
-        max : 50
+    from:{
+        type:String,
+        max:50
     },
-    relationship: {
-        type: String,
-        enum: [1,2,3]
-    }
+    relationship:{
+        type:Number,
+        enum: [1, 2, 3]
+    },
+
 },
  { timestamps: true }
 )
