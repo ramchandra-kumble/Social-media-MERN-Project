@@ -56,7 +56,6 @@ router.get("/:id", async(req,res) => {
 })
 
 
-<<<<<<< HEAD
 // follow a user
 
 router.put("/:id/follow" , async (req,res)=> {
@@ -84,56 +83,9 @@ router.put("/:id/follow" , async (req,res)=> {
         res.status(403).json("you can not follow yourself");
     }   
 });
-=======
-// follow user
-
-router.put("/:id/follow", async (req, res) => {
-    if (req.body.userId !== req.params.id) {
-      try {
-        const user = await User.findById(req.params.id);
-        const currentUser = await User.findById(req.body.userId);
-        if (!user.followers.includes(req.body.userId)) {
-          await user.updateOne({ $push: { followers: req.body.userId } });
-          await currentUser.updateOne({ $push: { followings: req.params.id } });
-          res.status(200).json("user has been followed");
-        } else {
-          res.status(403).json("you allready follow this user");
-        }
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(403).json("you cant follow yourself");
-    }
-  });
-
-
-// unfollow user
-
-router.put("/:id/unfollow", async(req,res) => {
-    if(req.body.userId !== req.params.id){
-    try{
-      const user = await User.findById(req.params.id);
-      const currentUser = await User.findById(req.body.userId);
-      if(!user.followers.includes(req.body.userId)){
-           await user.updateOne({ $pull: {followers: req.body.userId}});
-           await currentUser.updateOne({ $pull: {followings: req.body.params.id}});
-           res.status(200).json("User unfollowed")
-      } else {
-          res.status(403).json("you don't follow this user")
-      }
-     } catch (err){
-        res.status(500).json(err)
-    }
-    } else {
-        res.status(403).json("can't unfollow yourself")
-    }
-})
->>>>>>> bc0d49be64a3d9b930bbddc425673ca138f3b5b8
 
 //unfollow a user 
 
-<<<<<<< HEAD
 router.put("/:id/unfollow" , async (req,res)=> {
     console.log("tire -1");
 
@@ -167,6 +119,3 @@ router.put("/:id/unfollow" , async (req,res)=> {
 
 
 module.exports = router;
-=======
-module.exports = router
->>>>>>> bc0d49be64a3d9b930bbddc425673ca138f3b5b8
