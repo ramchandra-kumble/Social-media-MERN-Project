@@ -1,83 +1,91 @@
-.post{
-    width: 100%;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32); 
-    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32);
-    margin: 30px 0;
+.post {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.32);
+  margin: 30px 0;
 }
 
-.postWrap{
-    padding: 10px;
+.postWrap {
+  padding: 10px;
 }
 
-.postTop{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.postTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.postLeftTop{
-    display: flex;
-    align-items: center;
+.postLeftTop {
+  display: flex;
+  align-items: center;
 }
 
-
-.postProfileImg{
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
+.postProfileImg {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-.postUsername{
-    font-style: 15px;
-    font-weight: 500;
-    margin: 0 10px;
+.postUsername {
+  font-style: 15px;
+  font-weight: 500;
+  margin: 0 10px;
 }
 
-.postDate{
-    font-style: 12px;
+.postDate {
+  font-style: 12px;
 }
 
-.postImages{
-    max-height: 500px;
-    margin-top: 20px;
-    width: 100%;
-    object-fit: contain;
+.postImages {
+  max-height: 500px;
+  margin-top: 20px;
+  width: 100%;
+  object-fit: contain;
 }
 
-.postCenter{
-    margin: 20px 0;
+.postCenter {
+  margin: 20px 0;
 }
 
-.postBottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.postBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.postLeftBottom{
-    display: flex;
-    align-items: center;
+.postLeftBottom {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: 3px;
 }
 
-.postLike{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin-right: 5px;
+.postLike {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: transform 0.1s ease-in-out;
+}
+.postLike:hover {
+  transform: scale(1.2);
 }
 
-.postHeart{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin-right: 5px;
+.postHeart {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: transform 0.1s ease-in-out;
 }
-
-.postComments{
-    cursor: pointer;
-    border-bottom: 1px dashed grey;
-    font-style: 15px;
+.postHeart:hover {
+  transform: scale(1.2);
+}
+.postComments {
+  cursor: pointer;
+  border-bottom: 1px dashed grey;
+  font-style: 15px;
 }

@@ -1,77 +1,82 @@
-.share{
-    width: 100%;
-    height:170px;
-    border-radius: 15px;
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32); 
-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32);
+.share {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.32);
 }
 
-.shareWrap{
-    padding: 15px;
+.shareWrap {
+  padding: 20px;
 }
 
-.shareImg{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+.shareImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
-.shareTop{
-    display: flex;
-    align-items: center;
+.shareTop {
+  display: flex;
+  align-items: center;
 }
 
-.shareInput{
-    border: none;
-    width: 80%;
+.shareInput {
+  border: none;
+  width: 80%;
 }
 
-.shareInput:focus{
-    outline: none;
+.shareInput:focus {
+  outline: none;
 }
 
-.shareHr{
-    margin: 20px;
+.shareHr {
+  margin: 30px 20px 25px 20px;
 }
 
-.shareBottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
- 
-.shareOptions{
-    display: flex;
-    margin-left: 25px;
+.shareBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.shareOption{
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    cursor: pointer;
+.shareOptions {
+  display: flex;
+  margin-left: 25px;
 }
 
-.shareIcon{
-    margin: 5px;
-    font-size: 18px;
+.shareOption {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  cursor: pointer;
 }
 
-
-.shareOptionText{
-    font-style: 14px;
-    font-weight: 500;
+.shareIcon {
+  margin: 5px;
+  margin-left: 10px;
+  font-size: 18px;
 }
 
-.shareButton{
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: green;
-    font-weight: 500;
-    color: white;
-    margin-right: 20px;
-    cursor: pointer;
+.shareOptionText {
+  font-style: 15px;
+  font-weight: 500;
+}
+
+.shareButton {
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  background-color: green;
+  font-weight: 500;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-out;
+}
+
+.shareButton:hover {
+  background-color: rgb(5, 151, 5);
 }

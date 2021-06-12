@@ -3,6 +3,7 @@
   height: calc(100vh - 52px);
   overflow-y: scroll;
   position: sticky;
+  top: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -15,6 +16,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: grey;
+  border-radius: 50px;
 }
 
 .sidebarWrap {
