@@ -1,5 +1,5 @@
 import { Chat, Person, Search, Notifications } from "@material-ui/icons";
-import "./Topbar.css";
+import "./topbar.css";
 
 export default function Topbar() {
   return (
