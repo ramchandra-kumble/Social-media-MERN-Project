@@ -44,13 +44,13 @@
 
 .shareOptions {
   display: flex;
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .shareOption {
   display: flex;
   align-items: center;
-  margin-right: 25px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -67,8 +67,8 @@
 
 .shareButton {
   border: none;
-  border-radius: 10px;
-  padding: 11px;
+  border-radius: 5px;
+  padding: 10px;
   background-color: green;
   font-weight: 500;
   color: white;
