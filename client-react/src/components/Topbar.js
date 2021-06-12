@@ -9,8 +9,8 @@ export default function Topbar() {
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
-          <Search />
-          <input placeholder="Search" className="searchInput" />
+          <Search className="searchIcon" />
+          <input placeholder="Searchbar" className="searchInput" />
         </div>
       </div>
       <div className="topbarRight">
