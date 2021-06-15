@@ -8,6 +8,8 @@ function Post ({post}) {
 const [like, setLike] = useState(post.like)
 const [isLiked, setIsLiked] = useState(false)
 
+const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
 function likeHandle () {
     setLike(isLiked ? like-1 : like+1)
     setIsLiked(!isLiked)
@@ -28,12 +30,12 @@ function likeHandle () {
             </div>
             <div className="postCenter">
                 <span className="postText">{post?.desc}</span>
-                <img src={post.photo} alt="" className="postImages"/>
+                <img src={PF+post.photo} alt="" className="postImages"/>
             </div>
             <div className="postBottom">
                 <div className="postLeftBottom">
-                    <img src="assets/like.png" alt="" className="postLike"  onClick={likeHandle}/>
-                    <img src="assets/heart.png" alt="" className="postHeart" onClick={likeHandle}/>
+                    <img src={`${PF}like.png`} alt="" className="postLike"  onClick={likeHandle}/>
+                    <img src={`${PF}heart.png`} alt="" className="postHeart" onClick={likeHandle}/>
                     <span className="likeCounter">{like} people like it</span>
                 </div>
                 <div className="postRightBottom">

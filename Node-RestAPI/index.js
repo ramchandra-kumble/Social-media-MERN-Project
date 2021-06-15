@@ -13,7 +13,7 @@ dotenv.config();
 //database
 mongoose.connect(
   process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false },
   () => {
     console.log("connected to mongo server");
   }
@@ -28,6 +28,6 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(3000, (req, res) => {
-  console.log("backend Server started");
+app.listen(8800, (req, res) => {
+  console.log("backend Server started at 8800");
 });

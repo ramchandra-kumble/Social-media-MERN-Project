@@ -5,6 +5,7 @@ import Post from "../Posts/Post"
 import { Posts } from "../../dummyData"
 
 function Feed(){
+    
  return(
      <div className="feed">
          <div className="feedWrap">
