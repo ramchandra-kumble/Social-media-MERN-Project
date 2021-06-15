@@ -3,7 +3,6 @@ import "./post.css";
 import {MoreVert} from "@material-ui/icons"
 import {Users} from "../../dummyData"
 
-
 function Post ({post}) {
 
 const [like, setLike] = useState(post.like)
@@ -24,7 +23,7 @@ function likeHandle () {
                     <span className="postDate">{post.date}</span>
                 </div>
                 <div className="postRightTop">
-                    <MoreVert />
+                    < MoreVert />
                 </div>
             </div>
             <div className="postCenter">
