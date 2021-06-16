@@ -7,7 +7,7 @@ export default function Topbar() {
     <div className="topbarContainer">
       <div className="topbarLeft">
       <Link to="/"  style={{textDecoration: 'none'}}>
-        <sapn className="Logo">Social</sapn>
+        <span className="Logo">Social</span>
       </Link>
       </div>
       <div className="topbarCenter">
@@ -24,7 +24,7 @@ export default function Topbar() {
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
-            <sapn className="topbarIconBadge">1</sapn>
+            <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">
             <Chat />
