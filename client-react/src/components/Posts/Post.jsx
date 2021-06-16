@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./post.css";
 import {MoreVert} from "@material-ui/icons"
 import {Users} from "../../dummyData"
+import axios from "axios";
 
 function Post ({post}) {
 
@@ -25,7 +26,7 @@ function likeHandle () {
                 <div className="postRightTop">
                     < MoreVert />
                 </div>
-            </div>
+            </div> 
             <div className="postCenter">
                 <span className="postText">{post?.desc}</span>
                 <img src={post.photo} alt="" className="postImages"/>
