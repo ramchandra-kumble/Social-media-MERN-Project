@@ -2,8 +2,7 @@ import React from "react"
 import "./rightbar.css"
 import Online from "../Online/Online"
 import { Users } from "../../dummyData"
-import { useState, useEffect } from "react";
-import axios from "axios";
+
 
 function Rightbar({username}){
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -11,22 +10,24 @@ function Rightbar({username}){
  
  const HomeRightbar = () => {
      return (
-         <>
-        <div className="birthdayContainer">
-        <img src="assets/gift.png" alt="" className="birthdayImg"/>
-        <span className="birthdayText">
-            <b>Midoriya</b> and <b>3 others friends</b> hava a birthday today
-        </span>
-        </div>
-        <img src="assets/ad.png" alt="" className="imgAd"/>
-        <h4 className="rightbarTitle">Online friends</h4>
-        <ul className="rightbarFriendList">
-        {Users.map((u) =>(
-            <Online key={u.id} user={u} />
-        ))}
-        
-        </ul>
-        </>
+        <>
+            <div className="birthdayContainer">
+                <img src="assets/gift.png" alt="" className="birthdayImg"/>
+                <span className="birthdayText">
+                    <b>Midoriya</b> and <b>3 others friends</b> hava a birthday today
+                </span>
+            </div>
+            <img src="assets/ad.png" alt="" className="imgAd"/>
+            <div className="rightbarOnlineFriendList" >    
+                <h4 className="rightbarTitle">Online friends</h4>
+                <ul className="rightbarFriendList">
+                    {Users.map((u) =>(
+                        <Online key={u.id} user={u} />
+                        ))}
+                
+                </ul>
+            </div>
+         </>
      )
  }
 

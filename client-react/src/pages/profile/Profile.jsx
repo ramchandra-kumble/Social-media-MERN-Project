@@ -5,18 +5,23 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import Feed from "../../components/feed/Feed";
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { useParams } from "react-router";
+
 
 export default function Profile() {
+
   const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const username = useParams().username;
+  
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get(`/users?username=Deku`);
+      const res = await axios.get(`/users?username=${username}`);
       setUser(res.data);
     };
     fetchUsers();
-  }, []);
+  }, [username]);
 
 
 
@@ -45,7 +50,7 @@ export default function Profile() {
             </div>
           </div>
           <div className="profileRightBottom">
-            <Feed username="Deku" />
+            <Feed username={username} />
             <Rightbar username={user} />
           </div>
         </div>

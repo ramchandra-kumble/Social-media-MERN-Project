@@ -78,6 +78,7 @@ router.get("/", async (req, res) => {
 
 router.put("/:id/follow", async (req, res) => {
   if (req.body._id !== req.params.id) {
+    console.log("tire 0");
     try {
       const user = await User.findById({ _id: req.params.id });
       const currentUser = await User.findById({ _id: req.body._id });
