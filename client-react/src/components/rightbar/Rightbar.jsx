@@ -14,8 +14,9 @@ function Rightbar({ user }) {
 
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [friends, setFriends] = useState([]);
-    const { user: currentUser } = useContext(AuthContext);
-    const [icon, setIcon] = useState(true);
+    const { user: currentUser , dispatch } = useContext(AuthContext);
+    const [followed, setFollow] = useState(currentUser.followings.includes(user?._id));
+
 
     useEffect(() => {
         const getFriends = async () => {
@@ -29,12 +30,22 @@ function Rightbar({ user }) {
         getFriends();
     }, [user]);
 
-    const handleFollow = () => {
-        console.log("Clicked");
-        setIcon(!icon);
-    };
+    const handleFollow = async () => {
+        try {
+            if (followed) {
+                await axios.put("/users/" + user._id + "/unfollow", { _id: currentUser._id });
+                dispatch({ type : "UNFOLLOW" , payload : user._id });
+            } else {
+                await axios.put("/users/" + user._id + "/follow", { _id: currentUser._id });
+                dispatch({ type : "FOLLOW" , payload : user._id });
+            }
 
-
+        } catch (err) {
+            console.log(err)
+        }
+        setFollow(!followed);
+    
+    }
 
     const HomeRightbar = () => {
         return (
@@ -66,8 +77,8 @@ function Rightbar({ user }) {
                 <div className="" >
 
                     {user.username !== currentUser.username && (
-                        <Button onClick={handleFollow} className="rightbarFollowBtn" variant="outlined" color={ icon ? "primary" : "secondary"}>
-                            {icon ? "Follow" : "Unfollow"}
+                        <Button onClick={handleFollow} className="rightbarFollowBtn" variant="outlined" color={ followed ? "secondary" : "primary"}>
+                            {followed ? "Unfollow" : "Follow"}
                         </Button>
                         
                     )}
