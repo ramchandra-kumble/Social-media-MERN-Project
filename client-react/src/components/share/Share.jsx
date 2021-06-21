@@ -44,6 +44,12 @@ function Share() {
                     <input ref={desc} placeholder={"What's on your " + user.username + "?"}className="shareInput"/>
               </div>
               <hr className="shareHr"/>
+              {file && (
+                <div className="shareImgContainer">
+                  <img className="shareImg" src={URL.createObjectURL(file)}/>
+                  <Cancel className="shareCancelImg" onClick={() => setFile(null)}/>
+                </div>
+              )}
               <form onSubmit={submitHandler} className="shareBottom">
                   <div className="shareOptions">
                       <label htmlFor="file" className="shareOption">
