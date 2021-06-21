@@ -5,6 +5,7 @@ import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext"
+import "./app.css"
 
 import {
   BrowserRouter as Router,
@@ -15,9 +16,17 @@ import {
 
 function App() {
   const { user } = useContext(AuthContext);
+  const [darkMode, setDarkMode] = useState(false)
+  
+  function darkModeOn(){
+    setDarkMode(!darkMode)
+  }
+  
+  let date = new Date();
+  let currentTime = date.getHours();
 
   return (
-    <div>
+    <div className={currentTime > 19 ? "dark-mode": "light-mode"}>
       <Router> 
         <Switch>
           <Route exact path="/" >
