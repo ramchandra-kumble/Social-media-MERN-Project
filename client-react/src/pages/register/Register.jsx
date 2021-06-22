@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRef } from "react";
 import "./register.css";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom"
 
 export default function Register() {
   const username = useRef();
@@ -69,7 +70,10 @@ export default function Register() {
               type="password"
             />
             <button className="loginButton" onClick={handleClick} type="submit" > Sign Up </button>
-            <button className="loginRegisterButton" >Log into Account</button>
+            <Link style={{textDecoration: "none",textAlign: "center" ,color: "white"}} to="/login" >
+            <button  className="loginRegisterButton" >Log into Account</button>
+            </Link>
+         
           </form>
         </div>
       </div>

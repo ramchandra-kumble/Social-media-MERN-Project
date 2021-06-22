@@ -2,7 +2,7 @@ import { Chat, Person, Search, Notifications } from "@material-ui/icons";
 import "./topbar.css";
 import {Link} from 'react-router-dom';
 import { useContext } from "react";
-import {AuthContext } from "../../context/AuthContext"
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
@@ -23,8 +23,12 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
+          <Link style= {{ textDecoration: "none", color: "white" } } to="/" >
           <span className="topbarLink">Homepage</span>
+          </Link>
+          <Link style={{textDecoration : "none", color: "white" } } to={`/profile/${user.username}`}>
           <span className="topbarLink">Timeline</span>
+          </Link>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">

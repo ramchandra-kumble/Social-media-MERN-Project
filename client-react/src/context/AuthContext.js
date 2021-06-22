@@ -2,19 +2,16 @@ import { createContext, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
 
 const INITAIL_STATE = {
-  user: {
-    _id: "60cbafbe8b67f53bc42bb912",
-    profilePicture: "person/1.jpeg",
-    coverPicture: "",
-    followers: [],
-    followings: [],
-    isAdmin: false,
-    username: "test",
-    email: "test@gmail.com",
-  },
+  user: null,
   isFetching: false,
   error: false,
 };
+
+if (typeof localStorage.getItem("user") == "undefined") {
+  INITAIL_STATE.user = null;
+} else {
+  INITAIL_STATE.user = JSON.parse(localStorage.getItem("user"));
+}
 
 export const AuthContext = createContext(INITAIL_STATE);
 

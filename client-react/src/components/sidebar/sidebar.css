@@ -7,16 +7,19 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
+  z-index: 100;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
+  z-index: 100;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: grey;
   border-radius: 50px;
+  z-index: 100;
 }
 
 .sidebarWrap {

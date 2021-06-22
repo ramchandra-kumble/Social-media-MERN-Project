@@ -56,7 +56,7 @@ function Rightbar({ user }) {
                         <b>Midoriya</b> and <b>3 others friends</b> hava a birthday today
                     </span>
                 </div>
-                <img src={PF + "/ad.png"} alt="" className="imgAd" />
+                <img src={PF + "/ad.jpeg"} alt="" className="imgAd" />
                 <div className="rightbarOnlineFriendList" >
                     <h4 className="rightbarTitle">Online friends</h4>
                     <ul className="rightbarFriendList">

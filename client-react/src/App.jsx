@@ -16,17 +16,17 @@ import {
 
 function App() {
   const { user } = useContext(AuthContext);
-  const [darkMode, setDarkMode] = useState(false)
+  // const [darkMode, setDarkMode] = useState(false)
   
-  function darkModeOn(){
-    setDarkMode(!darkMode)
-  }
+  // function darkModeOn(){
+  //   setDarkMode(!darkMode)
+  // }
   
   let date = new Date();
   let currentTime = date.getHours();
 
   return (
-    <div className={currentTime > 19 ? "dark-mode": "light-mode"}>
+    <div className= "light-mode">
       <Router> 
         <Switch>
           <Route exact path="/" >
