@@ -47,7 +47,10 @@ function Share() {
               {file && (
                 <div className="shareImgContainer">
                   <img className="shareImgpreview" alt="" src={URL.createObjectURL(file)} />
-                  <Cancel className="shareCancelImg" onClick={() => setFile(null)}/>
+              <Cancel className="shareImgCancel" onClick={() => {
+                setFile(null);
+                window.location.reload();
+              }} />
                 </div>
               )}
               <form onSubmit={submitHandler} className="shareBottom">

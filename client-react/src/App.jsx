@@ -22,8 +22,8 @@ function App() {
   //   setDarkMode(!darkMode)
   // }
   
-  let date = new Date();
-  let currentTime = date.getHours();
+  // let date = new Date();
+  // let currentTime = date.getHours();
 
   return (
     <div className= "light-mode">

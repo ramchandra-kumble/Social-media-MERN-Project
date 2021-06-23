@@ -9,7 +9,6 @@ import { useContext } from "react";
 import Button from '@material-ui/core/Button';
 
 
-
 function Rightbar({ user }) {
 
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -47,6 +46,13 @@ function Rightbar({ user }) {
     
     }
 
+    const handleLogout = () => {
+         localStorage.clear();
+         window.location.reload();
+    }
+
+
+
     const HomeRightbar = () => {
         return (
             <>
@@ -66,6 +72,15 @@ function Rightbar({ user }) {
 
                     </ul>
                 </div>
+                
+                <div class="container">
+	                <button onClick={handleLogout} class="animated-word">LOGOUT</button>
+                </div>
+                
+            
+
+
+
             </>
         )
     }
